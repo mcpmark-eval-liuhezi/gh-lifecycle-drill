@@ -1,0 +1,17 @@
+# Configuration template for the drill app
+# Copy to config/app.yaml and fill in values before running.
+
+app:
+  name: gh-lifecycle-drill
+  version: 0.1.0
+  environment: development
+  log_level: info
+
+server:
+  host: 127.0.0.1
+  port: 8080
+  timeout_seconds: 30
+
+features:
+  telemetry: false
+  onboarding_mode: true
