@@ -1,17 +1,25 @@
-# Configuration template for the drill app
-# Copy to config/app.yaml and fill in values before running.
+# Application Configuration Template
 
+This is a disposable template used for the onboarding workshop drill.
+
+```yaml
+# --- App settings ---
 app:
-  name: gh-lifecycle-drill
-  version: 0.1.0
   environment: development
   log_level: info
+  max_connections: 10
 
-server:
-  host: 127.0.0.1
-  port: 8080
-  timeout_seconds: 30
+# --- Database settings ---
+database:
+  host: localhost
+  port: 5432
+  name: app_db
+  pool_size: 5
 
-features:
-  telemetry: false
-  onboarding_mode: true
+# --- Feature flags ---
+feature_flags:
+  enable_dashboard: true
+  enable_experimental_api: false
+```
+
+Replace the placeholder values with real values before use.
